@@ -1,3 +1,6 @@
+
+#Concatenation of Array 😌
+
 class Solution(object):
   def getConcatenation(self, nums):
     n=len(nums)
@@ -11,4 +14,4 @@ class Solution(object):
 nums = list(map(int,input().split()))
 obj = Solution()
 result = obj.getConcatenation(nums)
-print('Output:', result)
+print(result)
