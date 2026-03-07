@@ -3,8 +3,8 @@
 > Solving one problem a day. Building consistency over perfection.
 
 ![Python](https://img.shields.io/badge/Language-Python-blue?style=flat&logo=python)
-![Problems](https://img.shields.io/badge/Problems%20Solved-2-brightgreen?style=flat)
-![Streak](https://img.shields.io/badge/Streak-Day%202%20🔥-orange?style=flat)
+![Problems](https://img.shields.io/badge/Problems%20Solved-3-brightgreen?style=flat)
+![Streak](https://img.shields.io/badge/Streak-Day%203%20🔥-orange?style=flat)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=flat)
 
 ---
@@ -16,7 +16,6 @@
 | 🎓 Degree | B.Tech CSE — 2nd Year |
 | 🐍 Language | Python |
 | 🎯 Goal | Placement & Internship Preparation |
-|    |
 
 ---
 
@@ -29,6 +28,10 @@ DSA-Practice/
 │   ├── concatenation.py
 ├── Strings/
 ├── LinkedList/
+│   └── add_two_numbers/
+│       ├── solution.py
+│       ├── solution_normal.py
+│       └── README.md
 ├── Trees/
 ├── Graphs/
 ```
@@ -41,6 +44,7 @@ DSA-Practice/
 |-----|-------|---------|------------|----------|------|-------|
 | Day 1 | Arrays | Concatenation of Array | 🟢 Easy | Linear Scan | O(n) | O(n) |
 | Day 2 | Arrays | Two Sum | 🟢 Easy | HashMap | O(n) | O(n) |
+| Day 3 | Linked List | Add Two Numbers | 🟡 Medium | Dummy Node + Carry | O(max(m,n)) | O(max(m,n)) |
 
 ---
 
@@ -51,11 +55,10 @@ DSA-Practice/
 git clone https://github.com/yourusername/DSA-Practice.git
 
 # Go to folder
-cd DSA-Practice/Arrays
+cd DSA-Practice/LinkedList/add_two_numbers
 
 # Run any file
-python two_sum.py
-python concatenation.py
+python solution_normal.py
 ```
 
 ---
@@ -77,11 +80,11 @@ python concatenation.py
 
 | Metric | Count |
 |--------|-------|
-| ✅ Total Solved | 2 |
+| ✅ Total Solved | 3 |
 | 🟢 Easy | 2 |
-| 🟡 Medium | 0 |
+| 🟡 Medium | 1 |
 | 🔴 Hard | 0 |
-| 🔥 Current Streak | Day 2 |
+| 🔥 Current Streak | Day 3 |
 
 ---
 
@@ -89,7 +92,7 @@ python concatenation.py
 
 - [x] Arrays
 - [ ] Strings
-- [ ] Linked List
+- [x] Linked List
 - [ ] Stack & Queue
 - [ ] Binary Search
 - [ ] Recursion
