@@ -7,9 +7,9 @@ Solving LeetCode problems systematically. Clean Python solutions with multiple a
 ## 📊 Quick Stats
 
 ```
-Total Problems Solved:  8
+Total Problems Solved:  10
 ├── 🟢 Easy:     2
-├── 🟡 Medium:   5
+├── 🟡 Medium:   7
 ├── 🔴 Hard:     1
 ├── Approaches: Multiple
 ├── Languages:  Python 3.11+
@@ -38,12 +38,11 @@ leetcode-solutions/
 │   ├── longest_substring.py              (Medium)
 │   └── longest_palindromic_substring.py  (Medium)
 │
-├── 🔹 Recent Solutions/
+├── 🔹 Solutions/
 │   ├── ZigzagSolution.py                 (Medium)
-│   ├── zigzag_explanation.md
-│   ├── zigzag_visual_guide.md
 │   ├── ReverseInteger.py                 (Medium)
-│   └── ReverseInteger_Explanation.md
+│   ├── RegexMatching.py                  (Hard)
+│   └── ContainerWithMostWater.py         (Medium)
 │
 └── .git/                                 (Git commits)
 ```
@@ -62,6 +61,8 @@ leetcode-solutions/
 | 6 | ZigZag String Conversion | 🟡 Medium | [Python](./ZigzagSolution.py) | 5 ✅ | O(n) | O(n) |
 | 7 | Reverse Integer | 🟡 Medium | [Python](./ReverseInteger.py) | 10 ✅ | O(log n) | O(1) |
 | 8 | Median of Two Sorted Arrays | 🔴 Hard | [Python](./Arrays/median_of_two_sorted_arrays.py) | ✅ | O(log(m+n)) | O(1) |
+| 9 | Regular Expression Matching | 🔴 Hard | [Python](./RegexMatching.py) | 25 ✅ | O(m*n) | O(m*n) |
+| 10 | Container With Most Water | 🟡 Medium | [Python](./ContainerWithMostWater.py) | 15 ✅ | O(n) | O(1) |
 
 ---
 
@@ -80,6 +81,10 @@ leetcode-solutions/
 6. **Longest Palindromic Substring** — Medium | Expand around center
 7. **ZigZag String Conversion** — Medium | Pattern recognition
 8. **Reverse Integer** — Medium | Overflow handling
+
+### Dynamic Programming & Greedy
+9. **Regular Expression Matching** — Hard | DP with memoization
+10. **Container With Most Water** — Medium | Two pointer greedy
 
 ---
 
@@ -100,9 +105,11 @@ python LinkedList/add_two_numbers.py
 python Strings/longest_substring.py
 python Strings/longest_palindromic_substring.py
 
-# Recent Problems
+# DP & Greedy
 python ZigzagSolution.py
 python ReverseInteger.py
+python RegexMatching.py
+python ContainerWithMostWater.py
 ```
 
 ### View Tests
@@ -170,40 +177,46 @@ For ZigZag and Reverse Integer, additional detailed guides are included.
 - **Longest Substring:** Sliding window with character tracking
 - **Longest Palindromic:** Expand around center technique
 
-### Complex Problems (2 Problems)
+### DP & Greedy (4 Problems)
 - **ZigZag:** Pattern recognition with cycle calculation
 - **Reverse Integer:** Overflow detection before it happens
+- **Regular Expression:** DP with memoization, multiple approaches
+- **Container:** Two pointer greedy algorithm
 
 ---
 
 ## 📊 Test Coverage
 
-All 8 problems comprehensively tested:
+All 10 problems comprehensively tested:
 
 ```
-✅ Concatenation of Array    — Multiple test cases
-✅ Two Sum                    — Edge cases & duplicates
-✅ Add Two Numbers            — Carry logic, different lengths
-✅ Longest Substring          — Various character sets
-✅ Longest Palindromic        — Single char, no palindrome cases
-✅ ZigZag String              — Different row counts
-✅ Reverse Integer            — Overflow scenarios
-✅ Median of Two Sorted       — Even/odd length arrays
+✅ Concatenation of Array        — Multiple test cases
+✅ Two Sum                        — Edge cases & duplicates
+✅ Add Two Numbers                — Carry logic, different lengths
+✅ Longest Substring              — Various character sets
+✅ Longest Palindromic            — Single char, no palindrome cases
+✅ ZigZag String                  — Different row counts
+✅ Reverse Integer                — Overflow scenarios
+✅ Median of Two Sorted           — Even/odd length arrays
+✅ Regular Expression Matching    — Pattern matching, edge cases
+✅ Container With Most Water      — Various height configurations
 
-Overall: 35+ test cases | 100% PASS ✅
+Overall: 50+ test cases | 100% PASS ✅
 ```
 
 ---
 
 ## 🎓 Learning Outcomes
 
-After studying these 8 solutions, you'll understand:
+After studying these 10 solutions, you'll understand:
 
 ✅ **Array Problems** — Search, sorting, two-pointer techniques  
 ✅ **Linked List** — Dummy nodes, carry logic, traversal  
 ✅ **String Algorithms** — Sliding window, palindrome detection  
 ✅ **Pattern Recognition** — Zigzag cycles, mathematical patterns  
 ✅ **Overflow Handling** — Integer constraints & boundary checks  
+✅ **Dynamic Programming** — Memoization, DP tables, recursion  
+✅ **Greedy Algorithms** — Two pointer, optimal substructure  
 ✅ **Multiple Approaches** — Simple vs optimized solutions  
 ✅ **Complexity Analysis** — Time/space trade-offs  
 ✅ **Code Quality** — Professional, production-ready code  
@@ -222,6 +235,12 @@ python Strings/*.py
 # Run LinkedList solution
 python LinkedList/add_two_numbers.py
 
+# Run all DP & Greedy solutions
+python Zigzag*.py
+python Reverse*.py
+python Regex*.py
+python Container*.py
+
 # View all files
 ls -la **/*.py
 
@@ -234,27 +253,27 @@ find . -name "*.py" -type f | wc -l
 ## 📈 Statistics
 
 ```
-Total Problems:     8 solved
-Total Files:        8 Python files
+Total Problems:     10 solved
+Total Files:        10 Python files
 Total Approaches:   Multiple per problem
-Total Tests:        35+ test cases
+Total Tests:        50+ test cases
 Pass Rate:          100% ✅
-Topics Covered:     Arrays, LinkedList, Strings, Hard problems
-Difficulty:         Easy (2), Medium (5), Hard (1)
+Topics Covered:     Arrays, LinkedList, Strings, DP, Greedy
+Difficulty:         Easy (2), Medium (7), Hard (1)
 ```
 
 ---
 
 ## 🎯 Key Features
 
-✅ **8 Complete Problems** — Easy, Medium, Hard difficulty levels  
+✅ **10 Complete Problems** — Easy, Medium, Hard difficulty levels  
 ✅ **Multiple Approaches** — Different solutions for each problem  
-✅ **Comprehensive Testing** — 35+ test cases, 100% pass rate  
+✅ **Comprehensive Testing** — 50+ test cases, 100% pass rate  
 ✅ **Detailed Comments** — Every step explained  
 ✅ **Type Hints** — Modern Python syntax  
 ✅ **Complexity Analysis** — Time and space explained  
 ✅ **LeetCode Ready** — Tested and verified solutions  
-✅ **Well Organized** — By topic (Arrays, Strings, LinkedList)  
+✅ **Well Organized** — By topic (Arrays, Strings, LinkedList, DP, Greedy)  
 
 ---
 
@@ -296,9 +315,9 @@ git show <commit-hash>
 | Aspect | Info |
 |--------|------|
 | **Language** | Python 3.11+ |
-| **Total Problems** | 8 (2 Easy, 5 Medium, 1 Hard) |
-| **Topics** | Arrays, LinkedList, Strings, Pattern Recognition, Overflow |
-| **Test Coverage** | 35+ test cases, 100% pass rate |
+| **Total Problems** | 10 (2 Easy, 7 Medium, 1 Hard) |
+| **Topics** | Arrays, LinkedList, Strings, DP, Greedy, Pattern Recognition |
+| **Test Coverage** | 50+ test cases, 100% pass rate |
 | **Status** | ✅ Complete & Tested |
 | **Last Updated** | Today |
 
@@ -306,13 +325,14 @@ git show <commit-hash>
 
 ## 🙏 Notes
 
-- All 8 solutions tested and verified
+- All 10 solutions tested and verified
 - Edge cases explicitly handled for each problem
 - Code is production-ready
 - Multiple approaches shown for learning
 - Well documented with explanations
 - Organized by topic for easy navigation
 - 100% test pass rate
+- Both Easy, Medium, and Hard problems included
 
 ---
 
