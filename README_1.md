@@ -7,9 +7,9 @@ Solving LeetCode problems systematically. Clean Python solutions with multiple a
 ## 📊 Quick Stats
 
 ```
-Total Problems Solved:  10
-├── 🟢 Easy:     2
-├── 🟡 Medium:   7
+Total Problems Solved:  12
+├── 🟢 Easy:     3
+├── 🟡 Medium:   8
 ├── 🔴 Hard:     1
 ├── Approaches: Multiple
 ├── Languages:  Python 3.11+
@@ -42,7 +42,9 @@ leetcode-solutions/
 │   ├── ZigzagSolution.py                 (Medium)
 │   ├── ReverseInteger.py                 (Medium)
 │   ├── RegexMatching.py                  (Hard)
-│   └── ContainerWithMostWater.py         (Medium)
+│   ├── ContainerWithMostWater.py         (Medium)
+│   ├── IntegerToRoman.py                 (Medium)
+│   └── RomanToInteger.py                 (Easy)
 │
 └── .git/                                 (Git commits)
 ```
@@ -63,6 +65,8 @@ leetcode-solutions/
 | 8 | Median of Two Sorted Arrays | 🔴 Hard | [Python](./Arrays/median_of_two_sorted_arrays.py) | ✅ | O(log(m+n)) | O(1) |
 | 9 | Regular Expression Matching | 🔴 Hard | [Python](./RegexMatching.py) | 25 ✅ | O(m*n) | O(m*n) |
 | 10 | Container With Most Water | 🟡 Medium | [Python](./ContainerWithMostWater.py) | 15 ✅ | O(n) | O(1) |
+| 11 | Integer to Roman | 🟡 Medium | [Python](./IntegerToRoman.py) | 22 ✅ | O(1) | O(1) |
+| 12 | Roman to Integer | 🟢 Easy | [Python](./RomanToInteger.py) | 23 ✅ | O(n) | O(1) |
 
 ---
 
@@ -85,6 +89,8 @@ leetcode-solutions/
 ### Dynamic Programming & Greedy
 9. **Regular Expression Matching** — Hard | DP with memoization
 10. **Container With Most Water** — Medium | Two pointer greedy
+11. **Integer to Roman** — Medium | Greedy with value mapping
+12. **Roman to Integer** — Easy | Single pass comparison
 
 ---
 
@@ -105,11 +111,13 @@ python LinkedList/add_two_numbers.py
 python Strings/longest_substring.py
 python Strings/longest_palindromic_substring.py
 
-# DP & Greedy
+# Solutions (DP & Greedy & Conversions)
 python ZigzagSolution.py
 python ReverseInteger.py
 python RegexMatching.py
 python ContainerWithMostWater.py
+python IntegerToRoman.py
+python RomanToInteger.py
 ```
 
 ### View Tests
@@ -183,11 +191,15 @@ For ZigZag and Reverse Integer, additional detailed guides are included.
 - **Regular Expression:** DP with memoization, multiple approaches
 - **Container:** Two pointer greedy algorithm
 
+### Conversions (2 Problems)
+- **Integer to Roman:** Greedy with value mapping (22 tests)
+- **Roman to Integer:** Single pass with comparison (23 tests)
+
 ---
 
 ## 📊 Test Coverage
 
-All 10 problems comprehensively tested:
+All 12 problems comprehensively tested:
 
 ```
 ✅ Concatenation of Array        — Multiple test cases
@@ -200,23 +212,26 @@ All 10 problems comprehensively tested:
 ✅ Median of Two Sorted           — Even/odd length arrays
 ✅ Regular Expression Matching    — Pattern matching, edge cases
 ✅ Container With Most Water      — Various height configurations
+✅ Integer to Roman               — All Roman numeral patterns
+✅ Roman to Integer               — All subtractive cases
 
-Overall: 50+ test cases | 100% PASS ✅
+Overall: 60+ test cases | 100% PASS ✅
 ```
 
 ---
 
 ## 🎓 Learning Outcomes
 
-After studying these 10 solutions, you'll understand:
+After studying these 12 solutions, you'll understand:
 
 ✅ **Array Problems** — Search, sorting, two-pointer techniques  
 ✅ **Linked List** — Dummy nodes, carry logic, traversal  
-✅ **String Algorithms** — Sliding window, palindrome detection  
+✅ **String Algorithms** — Sliding window, palindrome detection, conversions  
 ✅ **Pattern Recognition** — Zigzag cycles, mathematical patterns  
 ✅ **Overflow Handling** — Integer constraints & boundary checks  
 ✅ **Dynamic Programming** — Memoization, DP tables, recursion  
-✅ **Greedy Algorithms** — Two pointer, optimal substructure  
+✅ **Greedy Algorithms** — Two pointer, optimal substructure, value mapping  
+✅ **Number Conversions** — Integer ↔ Roman numeral conversions  
 ✅ **Multiple Approaches** — Simple vs optimized solutions  
 ✅ **Complexity Analysis** — Time/space trade-offs  
 ✅ **Code Quality** — Professional, production-ready code  
@@ -235,11 +250,13 @@ python Strings/*.py
 # Run LinkedList solution
 python LinkedList/add_two_numbers.py
 
-# Run all DP & Greedy solutions
+# Run all Solutions (DP, Greedy, Conversions)
 python Zigzag*.py
 python Reverse*.py
 python Regex*.py
 python Container*.py
+python Integer*.py
+python Roman*.py
 
 # View all files
 ls -la **/*.py
@@ -253,27 +270,27 @@ find . -name "*.py" -type f | wc -l
 ## 📈 Statistics
 
 ```
-Total Problems:     10 solved
-Total Files:        10 Python files
+Total Problems:     12 solved
+Total Files:        12 Python files
 Total Approaches:   Multiple per problem
-Total Tests:        50+ test cases
+Total Tests:        60+ test cases
 Pass Rate:          100% ✅
-Topics Covered:     Arrays, LinkedList, Strings, DP, Greedy
-Difficulty:         Easy (2), Medium (7), Hard (1)
+Topics Covered:     Arrays, LinkedList, Strings, DP, Greedy, Conversions
+Difficulty:         Easy (3), Medium (8), Hard (1)
 ```
 
 ---
 
 ## 🎯 Key Features
 
-✅ **10 Complete Problems** — Easy, Medium, Hard difficulty levels  
+✅ **12 Complete Problems** — Easy, Medium, Hard difficulty levels  
 ✅ **Multiple Approaches** — Different solutions for each problem  
-✅ **Comprehensive Testing** — 50+ test cases, 100% pass rate  
+✅ **Comprehensive Testing** — 60+ test cases, 100% pass rate  
 ✅ **Detailed Comments** — Every step explained  
 ✅ **Type Hints** — Modern Python syntax  
 ✅ **Complexity Analysis** — Time and space explained  
 ✅ **LeetCode Ready** — Tested and verified solutions  
-✅ **Well Organized** — By topic (Arrays, Strings, LinkedList, DP, Greedy)  
+✅ **Well Organized** — By topic (Arrays, Strings, LinkedList, DP, Greedy, Conversions)  
 
 ---
 
@@ -315,9 +332,9 @@ git show <commit-hash>
 | Aspect | Info |
 |--------|------|
 | **Language** | Python 3.11+ |
-| **Total Problems** | 10 (2 Easy, 7 Medium, 1 Hard) |
-| **Topics** | Arrays, LinkedList, Strings, DP, Greedy, Pattern Recognition |
-| **Test Coverage** | 50+ test cases, 100% pass rate |
+| **Total Problems** | 12 (3 Easy, 8 Medium, 1 Hard) |
+| **Topics** | Arrays, LinkedList, Strings, DP, Greedy, Conversions |
+| **Test Coverage** | 60+ test cases, 100% pass rate |
 | **Status** | ✅ Complete & Tested |
 | **Last Updated** | Today |
 
@@ -325,14 +342,15 @@ git show <commit-hash>
 
 ## 🙏 Notes
 
-- All 10 solutions tested and verified
+- All 12 solutions tested and verified
 - Edge cases explicitly handled for each problem
 - Code is production-ready
 - Multiple approaches shown for learning
 - Well documented with explanations
 - Organized by topic for easy navigation
 - 100% test pass rate
-- Both Easy, Medium, and Hard problems included
+- Easy, Medium, and Hard problems included
+- Includes bidirectional conversions (Integer ↔ Roman)
 
 ---
 
