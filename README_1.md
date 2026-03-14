@@ -7,9 +7,9 @@ Solving LeetCode problems systematically. Clean Python solutions with multiple a
 ## 📊 Quick Stats
 
 ```
-Total Problems Solved:  12
-├── 🟢 Easy:     3
-├── 🟡 Medium:   8
+Total Problems Solved:  14
+├── 🟢 Easy:     4
+├── 🟡 Medium:   9
 ├── 🔴 Hard:     1
 ├── Approaches: Multiple
 ├── Languages:  Python 3.11+
@@ -36,15 +36,17 @@ leetcode-solutions/
 │
 ├── 🔹 Strings/
 │   ├── longest_substring.py              (Medium)
-│   └── longest_palindromic_substring.py  (Medium)
+│   ├── longest_palindromic_substring.py  (Medium)
+│   ├── longest_common_prefix.py          (Easy)
+│   └── reverse_integer.py                (Medium)
 │
 ├── 🔹 Solutions/
 │   ├── ZigzagSolution.py                 (Medium)
-│   ├── ReverseInteger.py                 (Medium)
 │   ├── RegexMatching.py                  (Hard)
 │   ├── ContainerWithMostWater.py         (Medium)
 │   ├── IntegerToRoman.py                 (Medium)
-│   └── RomanToInteger.py                 (Easy)
+│   ├── RomanToInteger.py                 (Easy)
+│   └── ThreeSum.py                       (Medium)
 │
 └── .git/                                 (Git commits)
 ```
@@ -67,6 +69,8 @@ leetcode-solutions/
 | 10 | Container With Most Water | 🟡 Medium | [Python](./ContainerWithMostWater.py) | 15 ✅ | O(n) | O(1) |
 | 11 | Integer to Roman | 🟡 Medium | [Python](./IntegerToRoman.py) | 22 ✅ | O(1) | O(1) |
 | 12 | Roman to Integer | 🟢 Easy | [Python](./RomanToInteger.py) | 23 ✅ | O(n) | O(1) |
+| 13 | Longest Common Prefix | 🟢 Easy | [Python](./LongestCommonPrefix.py) | 14 ✅ | O(n*m) | O(1) |
+| 14 | 3Sum | 🟡 Medium | [Python](./ThreeSum.py) | 10 ✅ | O(n²) | O(1) |
 
 ---
 
@@ -85,12 +89,14 @@ leetcode-solutions/
 6. **Longest Palindromic Substring** — Medium | Expand around center
 7. **ZigZag String Conversion** — Medium | Pattern recognition
 8. **Reverse Integer** — Medium | Overflow handling
+9. **Longest Common Prefix** — Easy | Vertical scanning
 
-### Dynamic Programming & Greedy
-9. **Regular Expression Matching** — Hard | DP with memoization
-10. **Container With Most Water** — Medium | Two pointer greedy
-11. **Integer to Roman** — Medium | Greedy with value mapping
-12. **Roman to Integer** — Easy | Single pass comparison
+### Dynamic Programming & Greedy & Conversions
+10. **Regular Expression Matching** — Hard | DP with memoization
+11. **Container With Most Water** — Medium | Two pointer greedy
+12. **Integer to Roman** — Medium | Greedy with value mapping
+13. **Roman to Integer** — Easy | Single pass comparison
+14. **3Sum** — Medium | Two pointers with sorting
 
 ---
 
@@ -110,14 +116,16 @@ python LinkedList/add_two_numbers.py
 # Strings
 python Strings/longest_substring.py
 python Strings/longest_palindromic_substring.py
+python Strings/longest_common_prefix.py
+python Strings/reverse_integer.py
 
-# Solutions (DP & Greedy & Conversions)
+# Solutions (DP, Greedy, Conversions, Search)
 python ZigzagSolution.py
-python ReverseInteger.py
 python RegexMatching.py
 python ContainerWithMostWater.py
 python IntegerToRoman.py
 python RomanToInteger.py
+python ThreeSum.py
 ```
 
 ### View Tests
@@ -181,25 +189,24 @@ For ZigZag and Reverse Integer, additional detailed guides are included.
 ### LinkedList (1 Problem)
 - **Add Two Numbers:** Dummy node pattern, carry logic
 
-### Strings (2 Problems)
+### Strings (4 Problems)
 - **Longest Substring:** Sliding window with character tracking
 - **Longest Palindromic:** Expand around center technique
-
-### DP & Greedy (4 Problems)
-- **ZigZag:** Pattern recognition with cycle calculation
+- **Longest Common Prefix:** Vertical scanning with 4 approaches
 - **Reverse Integer:** Overflow detection before it happens
+
+### DP, Greedy & Conversions (5 Problems)
 - **Regular Expression:** DP with memoization, multiple approaches
 - **Container:** Two pointer greedy algorithm
-
-### Conversions (2 Problems)
-- **Integer to Roman:** Greedy with value mapping (22 tests)
-- **Roman to Integer:** Single pass with comparison (23 tests)
+- **Integer to Roman:** Greedy with value mapping
+- **Roman to Integer:** Single pass with comparison
+- **3Sum:** Two pointers with sorting & duplicate handling
 
 ---
 
 ## 📊 Test Coverage
 
-All 12 problems comprehensively tested:
+All 14 problems comprehensively tested:
 
 ```
 ✅ Concatenation of Array        — Multiple test cases
@@ -214,24 +221,27 @@ All 12 problems comprehensively tested:
 ✅ Container With Most Water      — Various height configurations
 ✅ Integer to Roman               — All Roman numeral patterns
 ✅ Roman to Integer               — All subtractive cases
+✅ Longest Common Prefix          — Multiple approaches (4)
+✅ 3Sum                           — All triplet variations
 
-Overall: 60+ test cases | 100% PASS ✅
+Overall: 70+ test cases | 100% PASS ✅
 ```
 
 ---
 
 ## 🎓 Learning Outcomes
 
-After studying these 12 solutions, you'll understand:
+After studying these 14 solutions, you'll understand:
 
 ✅ **Array Problems** — Search, sorting, two-pointer techniques  
 ✅ **Linked List** — Dummy nodes, carry logic, traversal  
-✅ **String Algorithms** — Sliding window, palindrome detection, conversions  
+✅ **String Algorithms** — Sliding window, palindrome detection, prefix finding  
 ✅ **Pattern Recognition** — Zigzag cycles, mathematical patterns  
 ✅ **Overflow Handling** — Integer constraints & boundary checks  
 ✅ **Dynamic Programming** — Memoization, DP tables, recursion  
 ✅ **Greedy Algorithms** — Two pointer, optimal substructure, value mapping  
 ✅ **Number Conversions** — Integer ↔ Roman numeral conversions  
+✅ **Search Algorithms** — Vertical scanning, binary search  
 ✅ **Multiple Approaches** — Simple vs optimized solutions  
 ✅ **Complexity Analysis** — Time/space trade-offs  
 ✅ **Code Quality** — Professional, production-ready code  
@@ -250,13 +260,14 @@ python Strings/*.py
 # Run LinkedList solution
 python LinkedList/add_two_numbers.py
 
-# Run all Solutions (DP, Greedy, Conversions)
+# Run all Solutions (DP, Greedy, Conversions, Search)
 python Zigzag*.py
-python Reverse*.py
 python Regex*.py
 python Container*.py
 python Integer*.py
 python Roman*.py
+python Longest*.py
+python Three*.py
 
 # View all files
 ls -la **/*.py
@@ -270,27 +281,27 @@ find . -name "*.py" -type f | wc -l
 ## 📈 Statistics
 
 ```
-Total Problems:     12 solved
-Total Files:        12 Python files
+Total Problems:     14 solved
+Total Files:        14 Python files
 Total Approaches:   Multiple per problem
-Total Tests:        60+ test cases
+Total Tests:        70+ test cases
 Pass Rate:          100% ✅
-Topics Covered:     Arrays, LinkedList, Strings, DP, Greedy, Conversions
-Difficulty:         Easy (3), Medium (8), Hard (1)
+Topics Covered:     Arrays, LinkedList, Strings, DP, Greedy, Conversions, Search
+Difficulty:         Easy (4), Medium (9), Hard (1)
 ```
 
 ---
 
 ## 🎯 Key Features
 
-✅ **12 Complete Problems** — Easy, Medium, Hard difficulty levels  
+✅ **14 Complete Problems** — Easy, Medium, Hard difficulty levels  
 ✅ **Multiple Approaches** — Different solutions for each problem  
-✅ **Comprehensive Testing** — 60+ test cases, 100% pass rate  
+✅ **Comprehensive Testing** — 70+ test cases, 100% pass rate  
 ✅ **Detailed Comments** — Every step explained  
 ✅ **Type Hints** — Modern Python syntax  
 ✅ **Complexity Analysis** — Time and space explained  
 ✅ **LeetCode Ready** — Tested and verified solutions  
-✅ **Well Organized** — By topic (Arrays, Strings, LinkedList, DP, Greedy, Conversions)  
+✅ **Well Organized** — By topic (Arrays, Strings, LinkedList, DP, Greedy, Conversions, Search)  
 
 ---
 
@@ -332,9 +343,9 @@ git show <commit-hash>
 | Aspect | Info |
 |--------|------|
 | **Language** | Python 3.11+ |
-| **Total Problems** | 12 (3 Easy, 8 Medium, 1 Hard) |
-| **Topics** | Arrays, LinkedList, Strings, DP, Greedy, Conversions |
-| **Test Coverage** | 60+ test cases, 100% pass rate |
+| **Total Problems** | 14 (4 Easy, 9 Medium, 1 Hard) |
+| **Topics** | Arrays, LinkedList, Strings, DP, Greedy, Conversions, Search |
+| **Test Coverage** | 70+ test cases, 100% pass rate |
 | **Status** | ✅ Complete & Tested |
 | **Last Updated** | Today |
 
@@ -342,7 +353,7 @@ git show <commit-hash>
 
 ## 🙏 Notes
 
-- All 12 solutions tested and verified
+- All 14 solutions tested and verified
 - Edge cases explicitly handled for each problem
 - Code is production-ready
 - Multiple approaches shown for learning
@@ -351,6 +362,7 @@ git show <commit-hash>
 - 100% test pass rate
 - Easy, Medium, and Hard problems included
 - Includes bidirectional conversions (Integer ↔ Roman)
+- Includes string prefix finding and triplet search
 
 ---
 
